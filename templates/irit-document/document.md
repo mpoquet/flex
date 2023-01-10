@@ -6,7 +6,6 @@ author:
   title: Maître de conférences
   mail: millian.poquet@irit.fr
 date: 28 septembre 2022
-bibliography: biblio.bib
 ---
 
 # Context {-}
