@@ -1,0 +1,116 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage[hidelinks]{hyperref}
+\usepackage{wasysym}
+\usepackage{marvosym}
+
+\usepackage[french,english]{babel}
+
+\usepackage{lmodern}
+
+\usepackage[overlay, absolute]{textpos}
+\setlength{\TPHorizModule}{10mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{0mm}{0mm} % start everything near the top-left corner
+\usepackage{calc}
+\usepackage{graphicx}
+
+\usepackage{xcolor}
+\definecolor{blue-irit}{RGB}{0,86,112}
+\definecolor{orange-irit}{RGB}{255,76,0}
+\newcommand\crule[3][black]{\textcolor{#1}{\rule{#2}{#3}}}
+
+\usepackage{sectsty}
+\sectionfont{\color{blue-irit}}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headwidth}{.85\paperwidth}
+
+\fancyhf{}
+\renewcommand{\headrule}{}
+\renewcommand{\footrule}{}
+\fancyhead{}
+\fancyfoot[L]{\hskip -\hoffset \hskip -38mm \hskip -\oddsidemargin \crule[orange-irit]{.75\paperwidth}{1pt} %
+  \raisebox{-.5ex+.5pt}{\textcolor{orange-irit}{\href{mailto:$author.mail$}{\texttt{\textbf{$author.mail$}}}}}}
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=25mm
+}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=orange-irit,
+  filecolor=orange-irit,
+  urlcolor=orange-irit,
+  pdftitle={$title$},
+  pdfauthor={$author.firstname$ $author.lastname$}
+}
+
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=0pt}
+\setlist[enumerate]{noitemsep, topsep=0pt}
+
+%\let\oldhref\href
+%\renewcommand{\href}[2]{\oldhref{#1}{\bfseries#2}}
+
+\usepackage{titlesec}
+\titlespacing{\section}{0pt}{0pt}{0pt}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand{\biglogowithadress}{
+\begin{textblock*}{0mm}(20mm,10mm)
+  \noindent%
+  \includegraphics[width=30mm]{irit-logo.pdf}
+\end{textblock*}
+
+\begin{textblock*}{150mm}(60mm,10mm)
+\noindent\textsf{\raggedright\textcolor{blue-irit}{\textbf{Institut de Recherche en Informatique de Toulouse}}}
+\end{textblock*}
+
+\begin{textblock*}{150mm}(60mm,17mm)
+\noindent%
+$author.firstname$ \textsc{$author.lastname$}\\
+$if(author.title)$
+$author.title$\\
+$endif$
+Université Paul Sabatier, IRIT\\
+118 Route de Narbonne, 31062 Toulouse Cedex 9, France\\
+\href{mailto:$author.mail$}{\texttt{\textbf{$author.mail$}}}
+\end{textblock*}
+}
+
+\newcommand{\firstpagehead}{
+  \biglogowithadress
+  \mbox{}
+  \vskip 1.5cm%
+}
+\makeatletter
+
+\setlength{\parskip}{10pt}
+
+\date{\today{}}
+\author{$author.firstname$ $author.lastname$}
+
+\begin{document}
+\firstpagehead
+
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{1pt}}
+
+\begin{center}
+  \Large\textbf{\textcolor{blue-irit}{$title$}}
+\end{center}
+
+$body$
+
+\nocite{*}
+
+\end{document}

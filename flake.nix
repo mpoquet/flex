@@ -11,8 +11,9 @@
   };
 
   outputs = { self, nixpkgs, flake-utils, flake-compat }:
-    #let templates = import ./templates/nix_flake_templates.nix;
-    flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
+    let
+      templates-set = import ./templates/default.nix;
+    in flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
       let
         pkgs = import nixpkgs { inherit system; };
         shell-set = import ./shells/default.nix { inherit pkgs; };
@@ -20,5 +21,7 @@
         #packages = import ./pkgs/default.nix { inherit pkgs; };
         devShells = shell-set;
       }
-    );
+    ) // {
+      templates = templates-set;
+    };
 }
