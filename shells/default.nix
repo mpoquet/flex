@@ -15,4 +15,12 @@
       python3Packages.pandas
     ];
   };
+
+  asymptote-shell = pkgs.mkShell {
+    buildInputs = with pkgs; [
+      asymptote
+      ghostscript
+      texlive.combined.scheme-full
+    ];
+  };
 }
