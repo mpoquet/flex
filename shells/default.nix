@@ -4,6 +4,8 @@
     buildInputs = with pkgs; [
       R
       rPackages.tidyverse
+      rPackages.patchwork
+      rPackages.ggpubr
     ];
   };
 
