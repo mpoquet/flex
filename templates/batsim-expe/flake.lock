@@ -38,11 +38,11 @@
         "rev": "203c79745b0718d28fe08a6e2ba863ee9dff0922",
         "revCount": 248,
         "type": "git",
-        "url": "ssh://git@framagit.org/batsim/batsched"
+        "url": "https://git@framagit.org/batsim/batsched"
       },
       "original": {
         "type": "git",
-        "url": "ssh://git@framagit.org/batsim/batsched"
+        "url": "https://git@framagit.org/batsim/batsched"
       }
     },
     "mybatsim-src": {
@@ -53,11 +53,11 @@
         "rev": "766223dcff51b3d912e83e12f598d197eec92b35",
         "revCount": 2279,
         "type": "git",
-        "url": "ssh://git@framagit.org/batsim/batsim"
+        "url": "https://git@framagit.org/batsim/batsim"
       },
       "original": {
         "type": "git",
-        "url": "ssh://git@framagit.org/batsim/batsim"
+        "url": "https://git@framagit.org/batsim/batsim"
       }
     },
     "nixpkgs": {

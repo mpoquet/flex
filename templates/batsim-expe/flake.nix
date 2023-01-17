@@ -7,9 +7,9 @@
     };
     flake-utils.url = "github:numtide/flake-utils";
 
-    # define your own batsim and batsched source code as inputs, which are git repository fetched via ssh, using the default branch of each repository.
-    mybatsim-src.url = "git+ssh://git@framagit.org/batsim/batsim";
-    mybatsched-src.url = "git+ssh://git@framagit.org/batsim/batsched";
+    # define your own batsim and batsched source code as inputs, which are git repository fetched via https, using the default branch of each repository.
+    mybatsim-src.url = "git+https://git@framagit.org/batsim/batsim";
+    mybatsched-src.url = "git+https://git@framagit.org/batsim/batsched";
 
     # the lines below show other ways to define inputs depending on your need, taking batsched as an example.
 
@@ -19,9 +19,6 @@
 
     # batsched, from a git repository fetched via ssh, on a specific commit.
     # mybatsched-src.url = "git+ssh://git@framagit.org/batsim/batsched?rev=203c79745b0718d28fe08a6e2ba863ee9dff0922"; # important: rev, not ref!
-
-    # batsched, from a git repository fetched via https.
-    # mybatsched-src.url = "git+https://git@framagit.org/batsim/batsched";
 
     # batsched, from a local git repository. This is very useful for private repositories.
     # mybatsched-src.url = "/home/mpoquet/proj/batsched"; # use the path to the git repository's root
