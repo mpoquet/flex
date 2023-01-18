@@ -1,11 +1,11 @@
 ---
-title: Performance evaluation and optimization of resource set libraries
+title: "Performance evaluation and optimization of resource set libraries"
 author:
-  firstname: Millian
-  lastname: Poquet
-  title: Maître de conférences
-  mail: millian.poquet@irit.fr
-date: 28 septembre 2022
+  firstname: "Millian"
+  lastname: "Poquet"
+  title: "Maître de conférences"
+  mail: "millian.poquet@irit.fr"
+date: "28 septembre 2022"
 ---
 
 # Context {-}
