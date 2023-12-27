@@ -37,8 +37,14 @@
   };
 
   c-shell = pkgs.mkShell {
-    buildInputs = with pkgs;  [
+    buildInputs = with pkgs; [
       meson ninja
+    ];
+  };
+
+  typst-shell = pkgs.mkShell {
+    buildInputs = with pkgs; [
+      typst
     ];
   };
 }
