@@ -35,4 +35,10 @@
       texlive.combined.scheme-full
     ];
   };
+
+  c-shell = pkgs.mkShell {
+    buildInputs = with pkgs;  [
+      meson ninja
+    ];
+  };
 }
