@@ -1,4 +1,20 @@
 { pkgs } :
+
+let
+  fonts_opentype = with pkgs; [
+    fira
+    fira-mono
+    libertinus
+  ];
+  fonts_truetype = with pkgs; [
+    fira-code
+    inconsolata
+  ];
+  fonts = fonts_opentype ++ fonts_truetype;
+  fonts_opentype_paths = map (x: "${x}/share/fonts/opentype") fonts_opentype;
+  fonts_truetype_paths = map (x: "${x}/share/fonts/truetype") fonts_truetype;
+  fonts_paths = pkgs.lib.strings.concatStringsSep ":" (fonts_opentype_paths ++ fonts_truetype_paths);
+in
 {
   r-shell = pkgs.mkShell {
     buildInputs = with pkgs; [
@@ -45,6 +61,7 @@
   typst-shell = pkgs.mkShell {
     buildInputs = with pkgs; [
       typst
-    ];
+    ] ++ fonts;
+    TYPST_FONT_PATHS = fonts_paths;
   };
 }
