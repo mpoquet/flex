@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=22.11";
+    nixpkgs.url = "github:nixos/nixpkgs?ref=24.05";
     nur-kapack = {
       url = "github:oar-team/nur-kapack/master";
       inputs.nixpkgs.follows = "nixpkgs"; # tell kapack to use the nixpkgs that is defined above
