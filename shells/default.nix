@@ -3,6 +3,7 @@
 let
   fonts_opentype = with pkgs; [
     fira
+    fira-math
     fira-mono
     libertinus
   ];
