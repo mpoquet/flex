@@ -32,6 +32,7 @@ in
       rPackages.ggmap
       rPackages.svglite
       rPackages.extrafont
+      rPackages.readODS
       rPackages.showtext
       libertinus
     ];
@@ -56,6 +57,18 @@ in
   c-shell = pkgs.mkShell {
     buildInputs = with pkgs; [
       meson ninja
+    ];
+  };
+
+  c-shell-clang = (pkgs.mkShell.override {stdenv=pkgs.clangStdenv;}) {
+    buildInputs = with pkgs; [
+      meson ninja
+    ];
+  };
+
+  latex-shell = pkgs.mkShell {
+    buildInputs = with pkgs; [
+      texliveFull
     ];
   };
 
